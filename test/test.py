@@ -29,3 +29,7 @@ def find_smallest(numbers, to_return):
     return srt [0] if to_return == "value" else numbers.index(srt[0])
 
 print (find_smallest([ 3, 4,465, 6, 6, 6,46,4, 6,46, 4,8, 4,81, 1 ], "valueujkl"))
+
+
+def hello ():
+    return "hello Bahodir"
