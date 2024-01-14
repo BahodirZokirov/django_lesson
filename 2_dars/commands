@@ -31,4 +31,4 @@ Django project va django applar yaratish haqida oldingi darsda ko'rgandik. Hozir
 			XULOSA
 Oxirgi yozilgan comand[path('app_name', include('app_name.urls'))]ni tahlil qilsak undan shunday ma'no olish mumkin:
 	...8000/ dan keyin app_name ni yozsak path_name.urls ga yo'naltiradi.
-	app_name.urls da ham urlpatterns = ['something', the_function] ko'rinishidagi ma'lumotga duch kelamiz. Bu yerda something ...8000/app_name/ dan keyin keladigan so'z va the_function esa shu pathga murojat qilganda ishlashi kerak bo'lgan functionni ko'rsatmoqda.
+	app_name.urls da ham urlpatterns = ['something', the_function] ko'rinishidagi ma'lumotga duch kelamiz. Bu yerda something ...8000/app_name/ dan keyin keladigan so'z va the_function esa shu pathga murojat qilganda ishlashi kerak bo'lgan functionni ko'rsatmoqda!
