@@ -1,0 +1,34 @@
+5 ta project yaratish har biri ichida kamida 2 ta app applar ichida kamida 2 tadan HttpResponse func yozish
+
+
+
+
+
+
+Django project va django applar yaratish haqida oldingi darsda ko'rgandik. Hozir Project ichida HttpRespons function yozishni ko'ramiz. Project va applarni yaratgandan keyin:
+
+1. app_name.views ga kiramiz
+
+2. from django.http import HttpResponse
+3. def function_name (request):
+	return HttpResponse ("Write any text or something else here")
+
+4. ushbu app ichiga yangi bir (url.py) file yaratamiz
+5.	from django.urls import path
+6.	from .views import function_name
+7.	urlpatterns = [
+	path('path_name', function_name) <!--ushbu path_namega murojat qilinganda function_name funksiyasi qaytarayotgan ma'lumot browserda ko'rinadi. --> 	
+	]
+	
+<!--project ichidagi urls filega o'tamiz va u yerga yuqoridagi app_name appiga yozgan url manzilini kiritamiz.-->
+
+8. from django.urls import include
+9. urlpatterns o'zgaruvchisiga yangi pathni ya'ni appimiz ichida hosil qilingan urls pathini berib ketamiz. Buning uchun urlpatternsga quyidagi comandani yozamiz (10):
+
+10. path('app_name', include('app_name.urls')) <!--'app_name' o'rniga boshqa so'z yozsa ham bo'ladi bu yerda applar ko'p bo'lishi mumkin va qaysi app ichidagi ma'lumotga murojat qilayotganimizni bilish uchun app nomini yozib ketish tavfsiya etiladi. 
+
+
+			XULOSA
+Oxirgi yozilgan comand[path('app_name', include('app_name.urls'))]ni tahlil qilsak undan shunday ma'no olish mumkin:
+	...8000/ dan keyin app_name ni yozsak path_name.urls ga yo'naltiradi.
+	app_name.urls da ham urlpatterns = ['something', the_function] ko'rinishidagi ma'lumotga duch kelamiz. Bu yerda something ...8000/app_name/ dan keyin keladigan so'z va the_function esa shu pathga murojat qilganda ishlashi kerak bo'lgan functionni ko'rsatmoqda.
